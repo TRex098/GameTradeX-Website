@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTradeX - Buy & Sell Mobile Game Accounts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .admin-panel {
+            min-height: calc(100vh - 80px);
+        }
+        .blur-effect {
+            backdrop-filter: blur(5px);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="flex items-center space-x-2">
+                        <i class="fas fa-gamepad text-2xl"></i>
+                        <span class="text-xl font-bold">GameTradeX</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="nav-link hover:text-blue-200 transition">Home</a>
+                    <a href="#marketplace" class="nav-link hover:text-blue-200 transition">Marketplace</a>
+                    <a href="#sell" class="nav-link hover:text-blue-200 transition">Sell Account</a>
+                    <a href="#about" class="nav-link hover:text-blue-200 transition">About</a>
+                    <a href="#contact" class="nav-link hover:text-blue-200 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#login" class="bg-white text-blue-800 px-4 py-2 rounded-full font-medium hover:bg-blue-100 transition">Login</a>
+                    <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden gradient-bg px-4 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="nav-link hover:text-blue-200 transition">Home</a>
+                <a href="#marketplace" class="nav-link hover:text-blue-200 transition">Marketplace</a>
+                <a href="#sell" class="nav-link hover:text-blue-200 transition">Sell Account</a>
+                <a href="#about" class="nav-link hover:text-blue-200 transition">About</a>
+                <a href="#contact" class="nav-link hover:text-blue-200 transition">Contact</a>
+                <a href="#login" class="bg-white text-blue-800 px-4 py-2 rounded-full font-medium text-center hover:bg-blue-100 transition">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Home Page -->
+        <section id="home" class="tab-content active py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Buy & Sell Premium <span class="text-blue-600">Mobile Game</span> Accounts</h1>
+                        <p class="text-lg text-gray-600 mb-6">Trade PUBG Mobile, eFootball, Free Fire and other popular mobile game accounts safely with our secure platform.</p>
+                        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                            <a href="#marketplace" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium text-center hover:bg-blue-700 transition">Browse Accounts</a>
+                            <a href="#sell" class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium text-center hover:bg-blue-50 transition">Sell Your Account</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile Gaming" class="rounded-xl shadow-xl w-full">
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Featured Games</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1602673221577-0b56d7ce446b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="PUBG Mobile" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">PUBG Mobile</h3>
+                                <p class="text-gray-600 mb-4">Battle Royale accounts with rare skins and high ranks</p>
+                                <a href="#marketplace?game=pubg" class="text-blue-600 font-medium hover:underline">View Accounts</a>
+                            </div>
+                        </div>
+                        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="eFootball" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">eFootball</h3>
+                                <p class="text-gray-600 mb-4">Accounts with legendary players and high ratings</p>
+                                <a href="#marketplace?game=efootball" class="text-blue-600 font-medium hover:underline">View Accounts</a>
+                            </div>
+                        </div>
+                        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1631730487021-0b0b822b1f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Free Fire" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Free Fire</h3>
+                                <p class="text-gray-600 mb-4">Premium accounts with exclusive characters and items</p>
+                                <a href="#marketplace?game=freefire" class="text-blue-600 font-medium hover:underline">View Accounts</a>
+                            </div>
+                        </div>
+                        <div class="game-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                            <img src="https://images.unsplash.com/photo-1612287230202-983ff6f53530?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Call of Duty Mobile" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">COD Mobile</h3>
+                                <p class="text-gray-600 mb-4">High-rank accounts with legendary weapons</p>
+                                <a href="#marketplace?game=cod" class="text-blue-600 font-medium hover:underline">View Accounts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-white rounded-xl shadow-md p-8">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Why Choose GameTradeX?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Secure Transactions</h3>
+                            <p class="text-gray-600">Our escrow system ensures safe money transfers between buyers and sellers.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-user-check text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Verified Accounts</h3>
+                            <p class="text-gray-600">All accounts are verified by our team to prevent scams and fraud.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
+                            <p class="text-gray-600">Our customer support team is always ready to assist you with any issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marketplace Page -->
+        <section id="marketplace" class="tab-content py-12">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl font-bold text-gray-800 mb-8">Game Accounts Marketplace</h1>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h2 class="text-xl font-semibold text-gray-800">Filter Accounts</h2>
+                        </div>
+                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                            <select class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>All Games</option>
+                                <option>PUBG Mobile</option>
+                                <option>eFootball</option>
+                                <option>Free Fire</option>
+                                <option>COD Mobile</option>
+                            </select>
+                            <select class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Any Rank</option>
+                                <option>Bronze</option>
+                                <option>Silver</option>
+                                <option>Gold</option>
+                                <option>Platinum</option>
+                                <option>Diamond</option>
+                                <option>Legendary</option>
+                            </select>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Apply Filters</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Account Listing 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1602673221577-0b56d7ce446b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="PUBG Account" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-bold">TOP SELLER</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-gray-800">PUBG Mobile - Conqueror</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Verified</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Level 70 with 50+ legendary skins, Ace Dominator frame, and 10,000+ UC balance.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Seller">
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-gray-700">Seller: ProGamer123</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">4.9 (128 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-gray-800">$249.99</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Listing 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="eFootball Account" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-gray-800">eFootball - Legend Team</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Verified</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Full legend squad including Messi, Ronaldo, Maradona, and 5M GP balance.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Seller">
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-gray-700">Seller: FootballQueen</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">4.8 (97 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-gray-800">$179.99</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Listing 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1631730487021-0b0b822b1f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Free Fire Account" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold">HOT DEAL</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-gray-800">Free Fire - Heroic</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Verified</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Heroic rank with all elite passes since S5, 20+ character skins, and 5K diamonds.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Seller">
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-gray-700">Seller: FireMaster</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">4.7 (64 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-gray-800">$129.99</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Listing 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1612287230202-983ff6f53530?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="COD Mobile Account" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-gray-800">COD Mobile - Legendary</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Verified</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Legendary rank in both MP and BR, all mythic weapons, and 15K CP balance.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Seller">
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-gray-700">Seller: CODPro</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">5.0 (203 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-gray-800">$299.99</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Listing 5 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1602673221577-0b56d7ce446b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="PUBG Account" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-gray-800">PUBG Mobile - Ace Master</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Verified</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Ace Master with 30+ mythic outfits, glacier M416, and 5K UC balance.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/92.jpg" alt="Seller">
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-gray-700">Seller: PUBGKing</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">4.9 (156 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-gray-800">$199.99</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Listing 6 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="eFootball Account" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-gray-800">eFootball - Iconic Team</h3>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Verified</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Full iconic squad with 98+ rated players, 3M GP, and all premium managers.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-8 h-8 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Seller">
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-gray-700">Seller: FootballLegend</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">4.8 (112 reviews)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-gray-800">$229.99</span>
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-center">
+                    <nav class="flex items-center space-x-2">
+                        <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100">&laquo;</button>
+                        <button class="px-3 py-1 rounded bg-blue-600 text-white">1</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-100">2</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-100">3</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-100">4</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-100">5</button>
+                        <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-100">&raquo;</button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sell Account Page -->
+        <section id="sell" class="tab-content py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="gradient-bg text-white p-6">
+                        <h1 class="text-2xl font-bold">Sell Your Game Account</h1>
+                        <p class="mt-2">Fill out the form below to list your account for sale. Our team will verify it before publishing.</p>
+                    </div>
+                    <div class="p-6">
+                        <form id="sell-form">
+                            <div class="mb-6">
+                                <label for="game" class="block text-gray-700 font-medium mb-2">Game</label>
+                                <select id="game" name="game" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <option value="">Select a game</option>
+                                    <option value="pubg">PUBG Mobile</option>
+                                    <option value="efootball">eFootball</option>
+                                    <option value="freefire">Free Fire</option>
+                                    <option value="cod">Call of Duty Mobile</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="title" class="block text-gray-700 font-medium mb-2">Listing Title</label>
+                                <input type="text" id="title" name="title" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. PUBG Mobile Conqueror Account with Rare Skins" required>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="description" class="block text-gray-700 font-medium mb-2">Description</label>
+                                <textarea id="description" name="description" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Describe your account in detail (rank, skins, items, balance, etc.)" required></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="rank" class="block text-gray-700 font-medium mb-2">Current Rank</label>
+                                    <input type="text" id="rank" name="rank" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Conqueror, Legendary, etc." required>
+                                </div>
+                                <div>
+                                    <label for="level" class="block text-gray-700 font-medium mb-2">Account Level</label>
+                                    <input type="number" id="level" name="level" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 70" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="price" class="block text-gray-700 font-medium mb-2">Price (USD)</label>
+                                <div class="relative">
+                                    <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+                                    <input type="number" id="price" name="price" class="w-full border border-gray-300 rounded-lg px-4 py-2 pl-8 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="0.00" min="1" step="0.01" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2">Account Screenshots</label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                    <div class="flex flex-col items-center justify-center">
+                                        <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                                        <p class="text-gray-500">Drag & drop your screenshots here or click to browse</p>
+                                        <input type="file" id="screenshots" name="screenshots" class="hidden" multiple accept="image/*">
+                                        <button type="button" onclick="document.getElementById('screenshots').click()" class="mt-4 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition">Select Files</button>
+                                    </div>
+                                    <div id="file-list" class="mt-4 text-sm text-gray-500 hidden">
+                                        <p>Selected files: <span id="file-count">0</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="login-method" class="block text-gray-700 font-medium mb-2">Account Login Method</label>
+                                <select id="login-method" name="login-method" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                    <option value="">Select login method</option>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="google">Google</option>
+                                    <option value="twitter">Twitter</option>
+                                    <option value="game-center">Game Center</option>
+                                    <option value="guest">Guest (will provide ID)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input id="terms" name="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required>
+                                    </div>
+                                    <label for="terms" class="ml-2 text-sm text-gray-700">
+                                        I confirm that this account belongs to me and I have the right to sell it. I agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition">Submit for Verification</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="tab-content py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">About GameTradeX</h1>
+                    
+                    <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Story</h2>
+                        <p class="text-gray-600 mb-4">
+                            Founded in 2020, GameTradeX started as a small platform for PUBG Mobile players to trade their accounts safely. 
+                            Recognizing the need for a secure marketplace in the mobile gaming community, we expanded to include other popular 
+                            games like eFootball, Free Fire, and Call of Duty Mobile.
+                        </p>
+                        <p class="text-gray-600">
+                            Today, we're proud to be one of the most trusted platforms for buying and selling mobile game accounts, with 
+                            thousands of successful transactions and a growing community of gamers worldwide.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">How It Works</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+                                    <span class="text-blue-600 font-bold">1</span>
+                                </div>
+                                <h3 class="font-semibold text-gray-800 mb-2">List or Browse</h3>
+                                <p class="text-gray-600 text-sm">Sellers list their verified accounts with detailed descriptions. Buyers browse our extensive marketplace.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+                                    <span class="text-blue-600 font-bold">2</span>
+                                </div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Secure Transaction</h3>
+                                <p class="text-gray-600 text-sm">Our escrow system holds payment until the buyer confirms successful account transfer.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-3">
+                                    <span class="text-blue-600 font-bold">3</span>
+                                </div>
+                                <h3 class="font-semibold text-gray-800 mb-2">Enjoy Your Account</h3>
+                                <p class="text-gray-600 text-sm">Buyers receive their new account details, and sellers get paid. Our support team is always available if needed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Meet the Team</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Abdulla" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover">
+                                <h3 class="font-bold text-gray-800">Abdulla</h3>
+                                <p class="text-blue-600 font-medium">Founder & CEO</p>
+                                <p class="text-gray-600 text-sm mt-2">Passionate gamer and entrepreneur who started GameTradeX to create a safe marketplace for gamers.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover">
+                                <h3 class="font-bold text-gray-800">Sarah</h3>
+                                <p class="text-blue-600 font-medium">Head of Operations</p>
+                                <p class="text-gray-600 text-sm mt-2">Ensures smooth transactions and verifies all accounts listed on our platform.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David" class="w-24 h-24 rounded-full mx-auto mb-3 object-cover">
+                                <h3 class="font-bold text-gray-800">David</h3>
+                                <p class="text-blue-600 font-medium">Customer Support Lead</p>
+                                <p class="text-gray-600 text-sm mt-2">Leads our 24/7 support team to assist buyers and sellers with any issues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="tab-content py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Contact Us</h1>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in Touch</h2>
+                            <form id="contact-form">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                    <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                    <select id="subject" name="subject" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="support">Account Support</option>
+                                        <option value="verification">Verification Question</option>
+                                        <option value="payment">Payment Issue</option>
+                                        <option value="suggestion">Suggestion</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                                </div>
+                                <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition w-full">Send Message</button>
+                            </form>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Address</h3>
+                                        <p class="text-gray-600">123 Gaming Street, Dubai, UAE</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-envelope text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Email</h3>
+                                        <p class="text-gray-600">support@gametradex.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-phone-alt text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Phone</h3>
+                                        <p class="text-gray-600">+971 50 123 4567</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                        <i class="fas fa-clock text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-medium text-gray-800">Working Hours</h3>
+                                        <p class="text-gray-600">24/7 Customer Support</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h3 class="font-medium text-gray-800 mb-3">Follow Us</h3>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="bg-gray-100 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition">
+                                        <i class="fab fa-discord"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Page -->
+        <section id="login" class="tab-content py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="gradient-bg text-white p-6 text-center">
+                        <h1 class="text-2xl font-bold">Welcome Back</h1>
+                        <p class="mt-2">Login to your GameTradeX account</p>
+                    </div>
+                    <div class="p-8">
+                        <form id="login-form">
+                            <div class="mb-6">
+                                <label for="login-email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="login-email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="login-password" class="block text-gray-700 font-medium mb-2">Password</label>
+                                <input type="password" id="login-password" name="password" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6 flex justify-between items-center">
+                                <div class="flex items-center">
+                                    <input id="remember-me" name="remember-me" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300">
+                                    <label for="remember-me" class="ml-2 text-sm text-gray-700">Remember me</label>
+                                </div>
+                                <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
+                            </div>
+                            <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition w-full mb-4">Login</button>
+                            <div class="text-center">
+                                <p class="text-gray-600">Don't have an account? <a href="#register" class="text-blue-600 hover:underline">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Page -->
+        <section id="register" class="tab-content py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="gradient-bg text-white p-6 text-center">
+                        <h1 class="text-2xl font-bold">Create Your Account</h1>
+                        <p class="mt-2">Join thousands of gamers trading accounts safely</p>
+                    </div>
+                    <div class="p-8">
+                        <form id="register-form">
+                            <div class="mb-6">
+                                <label for="register-name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="register-name" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="register-email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="register-email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="register-password" class="block text-gray-700 font-medium mb-2">Password</label>
+                                <input type="password" id="register-password" name="password" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <p class="text-xs text-gray-500 mt-1">Minimum 8 characters with at least one number</p>
+                            </div>
+                            <div class="mb-6">
+                                <label for="register-confirm" class="block text-gray-700 font-medium mb-2">Confirm Password</label>
+                                <input type="password" id="register-confirm" name="confirm" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input id="register-terms" name="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required>
+                                    </div>
+                                    <label for="register-terms" class="ml-2 text-sm text-gray-700">
+                                        I agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and <a href="#" class="text-blue-600 hover:underline">Privacy Policy</a>.
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="gradient-bg text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition w-full mb-4">Create Account</button>
+                            <div class="text-center">
+                                <p class="text-gray-600">Already have an account? <a href="#login" class="text-blue-600 hover:underline">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Panel -->
+        <section id="admin" class="tab-content py-12 hidden">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Sidebar -->
+                    <div class="md:w-1/4 bg-white rounded-xl shadow-md p-4 mb-6 md:mb-0 md:mr-6">
+                        <div class="flex items-center mb-8">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Abdulla" class="w-12 h-12 rounded-full mr-3">
+                            <div>
+                                <h3 class="font-bold text-gray-800">Abdulla</h3>
+                                <p class="text-sm text-gray-600">Owner & Admin</p>
+                            </div>
+                        </div>
+                        <nav>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#admin-dashboard" class="admin-nav-link flex items-center p-2 rounded-lg bg-blue-100 text-blue-600">
+                                        <i class="fas fa-tachometer-alt mr-3"></i>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#admin-listings" class="admin-nav-link flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                                        <i class="fas fa-list-alt mr-3"></i>
+                                        Listings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#admin-transactions" class="admin-nav-link flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                                        <i class="fas fa-exchange-alt mr-3"></i>
+                                        Transactions
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#admin-users" class="admin-nav-link flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                                        <i class="fas fa-users mr-3"></i>
+                                        Users
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#admin-verification" class="admin-nav-link flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                                        <i class="fas fa-check-circle mr-3"></i>
+                                        Verifications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#admin-settings" class="admin-nav-link flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                                        <i class="fas fa-cog mr-3"></i>
+                                        Settings
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="mt-8 pt-4 border-t border-gray-200">
+                            <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700">
+                                <i class="fas fa-sign-out-alt mr-3"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="md:w-3/4">
+                        <div id="admin-dashboard" class="admin-panel-content bg-white rounded-xl shadow-md p-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Admin Dashboard</h2>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                                <div class="bg-blue-50 rounded-xl p-4">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <p class="text-sm text-blue-600 font-medium">Total Listings</p>
+                                            <h3 class="text-2xl font-bold text-gray-800 mt-1">1,284</h3>
+                                        </div>
+                                        <div class="bg-blue-100 p-3 rounded-lg">
+                                            <i class="fas fa-list-alt text-blue-600"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-blue-600 mt-3">+12% from last month</p>
+                                </div>
+                                <div class="bg-green-50 rounded-xl p-4">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <p class="text-sm text-green-600 font-medium">Active Transactions</p>
+                                            <h3 class="text-2xl font-bold text-gray-800 mt-1">327</h3>
+                                        </div>
+                                        <div class="bg-green-100 p-3 rounded-lg">
+                                            <i class="fas fa-exchange-alt text-green-600"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-green-600 mt-3">+8% from last month</p>
+                                </div>
+                                <div class="bg-purple-50 rounded-xl p-4">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <p class="text-sm text-purple-600 font-medium">New Users</p>
+                                            <h3 class="text-2xl font-bold text-gray-800 mt-1">542</h3>
+                                        </div>
+                                        <div class="bg-purple-100 p-3 rounded-lg">
+                                            <i class="fas fa-users text-purple-600"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-purple-600 mt-3">+15% from last month</p>
+                                </div>
+                                <div class="bg-yellow-50 rounded-xl p-4">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <p class="text-sm text-yellow-600 font-medium">Revenue</p>
+                                            <h3 class="text-2xl font-bold text-gray-800 mt-1">$28,450</h3>
+                                        </div>
+                                        <div class="bg-yellow-100 p-3 rounded-lg">
+                                            <i class="fas fa-dollar-sign text-yellow-600"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-yellow-600 mt-3">+22% from last month</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-8">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-4">Recent Transactions</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full bg-white rounded-lg overflow-hidden">
+                                        <thead class="bg-gray-50">
+                                            <tr>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Game</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Buyer</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Seller</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-200">
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#GTX-4872</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">PUBG Mobile</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">user123</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">progamer22</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$249.99</td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Completed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#GTX-4871</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">eFootball</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">footballfan</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">legendseller</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$179.99</td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">In Progress</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#GTX-4870</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Free Fire</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">fireplayer</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">eliteseller</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$129.99</td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <span class="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">Payment Pending</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#GTX-4869</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">COD Mobile</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">codlover</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">codpro</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$299.99</td>
+                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                    <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Completed</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-4">Pending Verifications</h3>
+                                <div class="space-y-4">
+                                    <div class="bg-gray-50 rounded-lg p-4 flex items-start">
+                                        <img src="https://images.unsplash.com/photo-1602673221577-0b56d7ce446b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="PUBG Account" class="w-16 h-16 rounded-lg object-cover mr-4">
+                                        <div class="flex-1">
+                                            <h4 class="font-medium text-gray-800">PUBG Mobile - Conqueror Account</h4>
+                                            <p class="text-sm text-gray-600 mb-2">Submitted by: proplayer99 | Price: $249.99</p>
+                                            <div class="flex space-x-2">
+                                                <button class="text-xs bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">View Details</button>
+                                                <button class="text-xs bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">Approve</button>
+                                                <button class="text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Reject</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gray-50 rounded-lg p-4 flex items-start">
+                                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="eFootball Account" class="w-16 h-16 rounded-lg object-cover mr-4">
+                                        <div class="flex-1">
+                                            <h4 class="font-medium text-gray-800">eFootball - Legend Team</h4>
+                                            <p class="text-sm text-gray-600 mb-2">Submitted by: footballking | Price: $199.99</p>
+                                            <div class="flex space-x-2">
+                                                <button class="text-xs bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">View Details</button>
+                                                <button class="text-xs bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">Approve</button>
+                                                <button class="text-xs bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Reject</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other admin panels would go here with display:none -->
+                        <div id="admin-listings" class="admin-panel-content bg-white rounded-xl shadow-md p-6 hidden">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Manage Listings</h2>
+                            <!-- Listing management content would go here -->
+                        </div>
+                        <div id="admin-transactions" class="admin-panel-content bg-white rounded-xl shadow-md p-6 hidden">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Transactions</h2>
+                            <!-- Transactions content would go here -->
+                        </div>
+                        <div id="admin-users" class="admin-panel-content bg-white rounded-xl shadow-md p-6 hidden">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">User Management</h2>
+                            <!-- User management content would go here -->
+                        </div>
+                        <div id="admin-verification" class="admin-panel-content bg-white rounded-xl shadow-md p-6 hidden">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Account Verifications</h2>
+                            <!-- Verification content would go here -->
+                        </div>
+                        <div id="admin-settings" class="admin-panel-content bg-white rounded-xl shadow-md p-6 hidden">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-6">Settings</h2>
+                            <!-- Settings content would go here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GameTradeX</h3>
+                    <p class="text-gray-400">The safest marketplace to buy and sell mobile game accounts.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#marketplace" class="text-gray-400 hover:text-white transition">Marketplace</a></li>
+                        <li><a href="#sell" class="text-gray-400 hover:text-white transition">Sell Account</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li
+</html>
